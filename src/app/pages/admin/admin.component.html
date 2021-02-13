@@ -1,0 +1,26 @@
+<div class="content">
+    <div class="side-bar" id="admin-side-bar">
+        <img src="../../../assets/images/_$udo.svg" class="logo"/>
+        <div class="link-list">
+            <a class="link" routerLink="dashboard" routerLinkActive="active-link">
+                <img src="../../../assets/images/chart-pie.svg" />
+                <p>Dashboard</p>
+            </a>
+            <a class="link" routerLink="accounts" routerLinkActive="active-link">
+                <img src="../../../assets/images/currency-dollar.svg" />
+                <p>Accounts</p>
+            </a>
+            <a class="link" routerLink="users" routerLinkActive="active-link">
+                <img src="../../../assets/images/users.svg" />
+                <p>Users</p>
+            </a>
+            <a class="link" routerLink="cards" routerLinkActive="active-link">
+                <img src="../../../assets/images/card.svg" />
+                <p>Cards</p>
+            </a>
+        </div>
+    </div>
+    <div class="main-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>

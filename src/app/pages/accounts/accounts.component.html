@@ -1,0 +1,226 @@
+<div class="content">
+    <app-admin-header [title]="'ACCOUNTS'"></app-admin-header>
+    <div class="main-body">
+        <div class="top-div">
+            <div class="account-balance">
+                <p>₦5,450,245</p>
+                <p>Total Balance in NGN</p>
+            </div>
+            <button *ngIf="this.tab == 0"><i nz-icon nzType="swap" nzTheme="outline"></i>Transfer</button>
+            <button *ngIf="this.tab == 1"><i nz-icon nzType="download" nzTheme="outline"></i>Download Statement</button>
+        </div>
+        <nz-tabset class="tabs" [nzSelectedIndex]="0" (nzSelectedIndexChange)="this.changeTabs($event)">
+            <nz-tab nzTitle="Accounts">
+                <div class="tab-content">
+                    <div class="section">
+                        <p class="heading">Main Accounts</p>
+                        <div class="account-list">
+                            <div class="account-item">
+                                <div>
+                                    <p class="text1">Main 1</p>
+                                    <p class="text2">NGN</p>
+                                    <img src="../../../assets/images/ng-flag.svg" />
+                                </div>
+                                <div class="right">
+                                    <i nz-icon nzType="right" nzTheme="outline"></i>
+                                    <p class="text3">₦400,540</p>
+                                </div>
+                            </div>
+                            <div class="account-item">
+                                <div>
+                                    <p class="text1">Main 2</p>
+                                    <p class="text2">USD</p>
+                                    <img src="../../../assets/images/us-flag.svg" />
+                                </div>
+                                <div class="right">
+                                    <i nz-icon nzType="right" nzTheme="outline"></i>
+                                    <p class="text3">$45,287</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <p class="heading">Card Accounts</p>
+                        <div class="account-list">
+                            <div class="account-item">
+                                <div>
+                                    <p class="text1">Timothy Benjamin</p>
+                                    <p class="text2">NGN</p>
+                                    <img src="../../../assets/images/ng-flag.svg" />
+                                </div>
+                                <div class="right">
+                                    <i nz-icon nzType="right" nzTheme="outline"></i>
+                                    <p class="text3">₦350,900</p>
+                                </div>
+                            </div>
+                            <div class="account-item">
+                                <div>
+                                    <p class="text1">Farouk Bakre</p>
+                                    <p class="text2">USD</p>
+                                    <img src="../../../assets/images/us-flag.svg" />
+                                </div>
+                                <div class="right">
+                                    <i nz-icon nzType="right" nzTheme="outline"></i>
+                                    <p class="text3">$65,987</p>
+                                </div>
+                            </div>
+                            <div class="account-item">
+                                <div>
+                                    <p class="text1">Thompson Badson Mattew</p>
+                                    <p class="text2">NGN</p>
+                                    <img src="../../../assets/images/ng-flag.svg" />
+                                </div>
+                                <div class="right">
+                                    <i nz-icon nzType="right" nzTheme="outline"></i>
+                                    <p class="text3">₦0</p>
+                                </div>
+                            </div>
+                            <div class="account-item">
+                                <div>
+                                    <p class="text1">Ben Ayade</p>
+                                    <p class="text2">USD</p>
+                                    <img src="../../../assets/images/us-flag.svg" />
+                                </div>
+                                <div class="right">
+                                    <i nz-icon nzType="right" nzTheme="outline"></i>
+                                    <p class="text3">$5,000</p>
+                                </div>
+                            </div>
+                            <div class="account-item">
+                                <div>
+                                    <p class="text1">Alhaji MK</p>
+                                    <p class="text2">USD</p>
+                                    <img src="../../../assets/images/us-flag.svg" />
+                                </div>
+                                <div class="right">
+                                    <i nz-icon nzType="right" nzTheme="outline"></i>
+                                    <p class="text3">$10,287</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </nz-tab>
+            <nz-tab nzTitle="Transactions">
+                <div class="tab-content">
+                    <div class="section">
+                        <p class="heading">Transaction History</p>
+                        <div class="history-list">
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status red"><i nz-icon nzType="arrow-up" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Transfered from Austin Emmanuel</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-red">-₦500</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status green"><i nz-icon nzType="arrow-down" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Recieved transfer from Adams Bella</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-green">+₦5,400</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status red"><i nz-icon nzType="arrow-up" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Transfered from Austin Emmanuel</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-red">-₦500</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status green"><i nz-icon nzType="arrow-down" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Recieved transfer from Adams Bella</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-green">+₦5,400</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status green"><i nz-icon nzType="arrow-down" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Recieved transfer from Adams Bella</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-green">+₦5,400</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status red"><i nz-icon nzType="arrow-up" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Transfered from Austin Emmanuel</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-red">-₦500</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status green"><i nz-icon nzType="arrow-down" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Recieved transfer from Adams Bella</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-green">+₦5,400</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status green"><i nz-icon nzType="arrow-down" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Recieved transfer from Adams Bella</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-green">+₦5,400</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status red"><i nz-icon nzType="arrow-up" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Transfered from Austin Emmanuel</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-red">-₦500</p>
+                                <button>View Details</button>
+                            </div>
+                            <div class="history-item">
+                                <div class="sec1">
+                                    <span class="status green"><i nz-icon nzType="arrow-down" nzTheme="outline"></i></span>
+                                    <div>
+                                        <p class="title">Recieved transfer from Adams Bella</p>
+                                        <p class="date">Yesterday</p>
+                                    </div>
+                                </div>
+                                <p class="amount text-green">+₦5,400</p>
+                                <button>View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nz-tab>
+        </nz-tabset>
+    </div>
+</div>

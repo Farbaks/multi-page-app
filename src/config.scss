@@ -1,6 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+// -------- import official less file -----------
+@import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
 
-@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+// -------- override less variables -----------
+@primary-color: #f5222d;
 
 
 body,
@@ -36,11 +38,4 @@ tui-root {
     .ant-switch-handle::before {
         background-color: rgba(22, 30, 46, 1) !important;
     }
-}
-.ant-tabs-tab.ant-tabs-tab-active {
-    border-color: rgba(22, 30, 46, 1) !important;
-    .ant-tabs-tab-btn {
-        color: rgba(22, 30, 46, 1) !important;
-    }
-    
 }

@@ -1,0 +1,18 @@
+<div class="header">
+    <div>
+        <p class="page-title">{{ this.title }}</p>
+    </div>
+    <div class="header-right">
+        <div class="toggle-option">
+            <nz-switch [(ngModel)]="switchValue" [nzControl]="true" (click)="clickSwitch()" [nzLoading]="loading"></nz-switch>
+            <span>{{ this.accountStatus }}</span>
+        </div>
+        <div class="admin-header-details">
+            <span class="initials">AE</span>
+            <div class="name-details">
+                <p>AEE & Sons Limited</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
