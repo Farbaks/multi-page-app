@@ -1,4 +1,4 @@
-import { Component, OnInit ,Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 
 @Component({
@@ -8,15 +8,21 @@ import { Component, OnInit ,Input} from '@angular/core';
 })
 export class AdminHeaderComponent implements OnInit {
   switchValue: boolean = false;
-  sidebarToggle:boolean = false;
+  sidebarToggle: boolean;
   loading: boolean = false;
   accountStatus: string = "Sandbox";
-  @Input() title:string;
+  @Input() title: string;
   constructor() {
   }
 
   ngOnInit(): void {
   }
+
+  ngOnChanges():void {
+    this.sidebarToggle = true;
+    this.toggleSidebar();
+  }
+
 
   clickSwitch(): void {
     if (!this.loading) {
@@ -42,7 +48,7 @@ export class AdminHeaderComponent implements OnInit {
       document.getElementById("h2").style.width = "80%";
       this.sidebarToggle = false;
     }
-    
+
   }
 
 }
