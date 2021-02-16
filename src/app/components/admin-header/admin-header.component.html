@@ -1,10 +1,16 @@
 <div class="header">
-    <div>
+    <div class="header-left">
+        <div class="hamburger" (click)="this.toggleSidebar()">
+            <div id="h1"></div>
+            <div id="h2"></div>
+        </div>
+        <img src="assets/images/_$udo.svg" class="logo" />
         <p class="page-title">{{ this.title }}</p>
     </div>
     <div class="header-right">
         <div class="toggle-option">
-            <nz-switch [(ngModel)]="switchValue" [nzControl]="true" (click)="clickSwitch()" [nzLoading]="loading"></nz-switch>
+            <nz-switch [(ngModel)]="switchValue" [nzControl]="true" (click)="clickSwitch()" [nzLoading]="loading">
+            </nz-switch>
             <span>{{ this.accountStatus }}</span>
         </div>
         <div class="admin-header-details">
@@ -12,7 +18,25 @@
             <div class="name-details">
                 <p>AEE & Sons Limited</p>
             </div>
+            <!-- Dropdown -->
+            <span class="initials2" nz-dropdown [nzDropdownMenu]="menu" [nzOverlayClassName]="'dropdown1'">AE</span>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+                <div class="detail">
+                    <span class="initials">AE</span>
+                    <div class="name-details">
+                        <p>AEE & Sons Limited</p>
+                    </div>
+                </div>
+                <div class="toggle-option2">
+                    <nz-switch [(ngModel)]="switchValue" [nzControl]="true" (click)="clickSwitch()"
+                        [nzLoading]="loading"></nz-switch>
+                    <span>{{ this.accountStatus }}</span>
+                </div>
+            </nz-dropdown-menu>
         </div>
     </div>
-    
+</div>
+<div class="name">
+    <p>{{ this.title }}</p>
+    <div class="line"></div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountsComponent implements OnInit {
   tab:number = 0;
-  constructor() { }
+  constructor(private route:ActivatedRoute) {
+  }
 
   ngOnInit(): void {
   }

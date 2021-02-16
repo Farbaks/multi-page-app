@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminHeaderComponent } from './admin-header.component';
 
 import { NzSwitchModule } from 'ng-zorro-antd/switch';
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 
 
 
@@ -14,7 +15,8 @@ import { NzSwitchModule } from 'ng-zorro-antd/switch';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NzSwitchModule
+    NzSwitchModule,
+    NzDropDownModule
   ],
   exports: [AdminHeaderComponent],
 })
