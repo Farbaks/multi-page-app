@@ -16,11 +16,11 @@ export class AdminHeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  ngOnChanges():void {
-    this.sidebarToggle = true;
-    this.toggleSidebar();
+    this.sidebarToggle = false;
+    if(window.innerWidth < 768) {
+      this.sidebarToggle = true;
+      this.toggleSidebar();
+    }
   }
 
 
@@ -35,7 +35,7 @@ export class AdminHeaderComponent implements OnInit {
     }
   }
 
-  toggleSidebar(): void {
+  toggleSidebar(type?:string): void {
     if (this.sidebarToggle == false) {
       document.getElementById("admin-side-bar").style.left = "0%";
       document.getElementById("h1").style.width = "70%";
