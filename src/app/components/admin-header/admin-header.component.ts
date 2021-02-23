@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class AdminHeaderComponent implements OnInit {
   loading: boolean = false;
   accountStatus: string = "Sandbox";
   @Input() title: string;
-  constructor() {
+  constructor(private auth:AuthService) {
   }
 
   ngOnInit(): void {
@@ -49,6 +50,10 @@ export class AdminHeaderComponent implements OnInit {
       this.sidebarToggle = false;
     }
 
+  }
+
+  login() {
+    this.auth.loginWithRedirect();
   }
 
 }
