@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { AuthService } from '@auth0/auth0-angular';
+
+import {AuthenticationService} from '../../services/authentication.service';
 
 
 @Component({
@@ -10,10 +11,11 @@ import { AuthService } from '@auth0/auth0-angular';
 export class AdminHeaderComponent implements OnInit {
   switchValue: boolean = false;
   sidebarToggle: boolean;
-  loading: boolean = false;
+  loading: boolean;
   accountStatus: string = "Sandbox";
   @Input() title: string;
-  constructor(private auth:AuthService) {
+  constructor(public authService:AuthenticationService) {
+    
   }
 
   ngOnInit(): void {
@@ -23,7 +25,6 @@ export class AdminHeaderComponent implements OnInit {
       this.toggleSidebar();
     }
   }
-
 
   clickSwitch(): void {
     if (!this.loading) {
@@ -53,7 +54,11 @@ export class AdminHeaderComponent implements OnInit {
   }
 
   login() {
-    this.auth.loginWithRedirect();
+    this.authService.login();
+  }
+
+  logout() {
+    this.authService.logout();
   }
 
 }

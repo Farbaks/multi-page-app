@@ -15,12 +15,14 @@
         </div>
         <div class="admin-header-details">
             <span class="initials" nz-dropdown nzTrigger="click" [nzDropdownMenu]="menu"
-            [nzOverlayClassName]="'dropdown1'">AE</span>
+                [nzOverlayClassName]="'dropdown1'">AE</span>
             <div class="name-details">
                 <p>AEE & Sons Limited</p>
+                <p *ngIf="!this.authService.loggedIn" (click)="this.login()">Login</p>
+                <p *ngIf="this.authService.loggedIn" (click)="this.logout()">Logout</p>
             </div>
             <!-- Dropdown -->
-            <span class="initials2" >AE</span>
+            <span class="initials2">AE</span>
             <nz-dropdown-menu #menu="nzDropdownMenu">
                 <div class="detail">
                     <span class="initials">AE</span>
@@ -33,9 +35,17 @@
                         [nzLoading]="loading"></nz-switch>
                     <span>{{ this.accountStatus }}</span>
                 </div>
-                <div class="login">
-                    <p (click) = "this.login()">Login</p>
-                </div>
+                <!-- <div class="login">
+                    <ng-container *ngIf="this.auth.isAuthenticated$ | async; else loggedOut">
+                        <p (click)="this.login()">Login</p>
+                    </ng-container>
+                    <ng-template #loggedOut>
+                        <p (click)="this.auth.logout({ returnTo: 'http://localhost:4200' })">Logout</p>
+                    </ng-template>
+                    <ul *ngIf="auth.user$ | async as user">
+                        <li>{{ user }}</li>
+                    </ul>
+                </div> -->
             </nz-dropdown-menu>
         </div>
     </div>
